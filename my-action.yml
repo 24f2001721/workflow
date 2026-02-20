@@ -1,13 +1,20 @@
-name: My First Action
+name: Assignment Action
 
+# Trigger the workflow on every push
 on: [push]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout your repository code
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Step 2: Custom step with your email (required by assignment)
       - name: 24f2001721@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+        run: echo "Hello, world! This step includes my email."
+
+      # Optional extra step: show current date/time
+      - name: Show date/time
+        run: date
