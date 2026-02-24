@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print student email for verification
+        run: echo "My student email is 24f2001721@ds.study.iitm.ac.in"
+
+      - name: Say hello (optional fun step)
+        run: echo "Oh hello! Nice to see you."
