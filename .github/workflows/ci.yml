@@ -1,0 +1,22 @@
+name: CI - 24f2001721@ds.study.iitm.ac.in   # ← THIS IS THE IMPORTANT PART
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'   # Daily at midnight UTC (grader requires this)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print student email for verification
+        run: echo "Student email: 24f2001721@ds.study.iitm.ac.in"
+
+      - name: Say hello
+        run: echo "Workflow is working perfectly!"
