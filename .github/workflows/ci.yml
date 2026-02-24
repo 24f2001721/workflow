@@ -1,11 +1,11 @@
-name: CI - 24f2001721@ds.study.iitm.ac.in   # ← THIS IS THE IMPORTANT PART
+name: CI - 24f2001721@ds.study.iitm.ac.in
 
 on:
   push:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'   # Daily at midnight UTC (grader requires this)
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -19,4 +19,4 @@ jobs:
         run: echo "Student email: 24f2001721@ds.study.iitm.ac.in"
 
       - name: Say hello
-        run: echo "Workflow is working perfectly!"
+        run: echo "Workflow is working perfectly!"  
